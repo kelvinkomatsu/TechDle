@@ -6,6 +6,11 @@
   <meta name="description" content="TechDle — Jogo educativo de adivinhação diária sobre hardware de computadores. Teste seus conhecimentos em tecnologia no estilo Wordle!">
   <title>TechDle — Adivinhe o Componente</title>
 
+  <!-- Google Fonts: Bubblegum Sans (estilo Bryndan Write) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YcnS/wPT08Qrg6GlOQ+VD0jBA2dG/6HPkjS" crossorigin="anonymous">
@@ -19,8 +24,8 @@
   <!-- CABEÇALHO GLOBAL                                              -->
   <!-- ============================================================ -->
   <header class="header-global" id="header-global">
-    <h1 class="header-global__titulo">TechDle</h1>
-    <p class="header-global__subtitulo">Adivinhe o componente do dia</p>
+    <h1 class="header-global__titulo">✦ TechDle ✦</h1>
+    <p class="header-global__subtitulo">Descubra o item secreto de hoje nos seus temas favoritos</p>
   </header>
 
   <!-- ============================================================ -->
@@ -29,48 +34,78 @@
   <section class="tela tela--ativa" id="tela-home">
     <div class="home-container">
 
-      <p class="home-tagline">* Escolha um modo de jogo para começar *</p>
+      <p class="home-tagline">✦ Escolha um modo de jogo para começar ✦</p>
 
       <div class="modos-grid" id="modos-grid">
 
         <!-- Modo Hardware (Diário) -->
-        <div class="modo-card modo-card--hardware" id="card-hardware" role="button" tabindex="0"
+        <div class="janela modo-card modo-card--hardware" id="card-hardware" role="button" tabindex="0"
              aria-label="Jogar Modo Hardware — Item do Dia">
-          <div class="modo-card__icone">🖥️</div>
-          <div class="modo-card__nome">Modo Hardware</div>
-          <div class="modo-card__desc">Adivinhe o componente do dia. Uma tentativa por dia, sem limite de chutes!</div>
+          <div class="janela__barra">
+            <span class="janela__dots"><i></i><i></i><i></i></span>
+            <span class="janela__nav">◁ ▷</span>
+          </div>
+          <div class="janela__conteudo">
+            <div class="modo-card__icone">🖥️</div>
+            <div class="modo-card__nome">Modo Hardware</div>
+            <div class="modo-card__desc">Adivinhe o componente do dia. Uma tentativa por dia, sem limite de chutes!</div>
+          </div>
         </div>
 
         <!-- Modo Prática -->
-        <div class="modo-card modo-card--pratica" id="card-pratica" role="button" tabindex="0"
+        <div class="janela modo-card modo-card--pratica" id="card-pratica" role="button" tabindex="0"
              aria-label="Jogar Modo Prática — Treine sem limites">
-          <div class="modo-card__icone">🎯</div>
-          <div class="modo-card__nome">Modo Prática</div>
-          <div class="modo-card__desc">Treine sem limites. Itens aleatórios, sem restrição diária.</div>
+          <div class="janela__barra">
+            <span class="janela__dots"><i></i><i></i><i></i></span>
+            <span class="janela__nav">◁ ▷</span>
+          </div>
+          <div class="janela__conteudo">
+            <div class="modo-card__icone">🎯</div>
+            <div class="modo-card__nome">Modo Prática</div>
+            <div class="modo-card__desc">Treine sem limites. Itens aleatórios, sem restrição diária.</div>
+          </div>
         </div>
 
         <!-- Modo Redes (Em breve) -->
-        <div class="modo-card modo-card--redes modo-card--disabled" aria-label="Modo Redes — Em breve">
-          <div class="modo-card__badge">Em breve</div>
-          <div class="modo-card__icone">🌐</div>
-          <div class="modo-card__nome">Modo Redes</div>
-          <div class="modo-card__desc">Protocolos, topologias e dispositivos de rede.</div>
+        <div class="janela modo-card modo-card--redes modo-card--disabled" aria-label="Modo Redes — Em breve">
+          <div class="janela__barra">
+            <span class="janela__dots"><i></i><i></i><i></i></span>
+            <span class="janela__nav">◁ ▷</span>
+          </div>
+          <div class="janela__conteudo">
+            <div class="modo-card__badge">Em breve</div>
+            <div class="modo-card__icone">🌐</div>
+            <div class="modo-card__nome">Modo Redes</div>
+            <div class="modo-card__desc">Protocolos, topologias e dispositivos de rede.</div>
+          </div>
         </div>
 
         <!-- Modo Linguagens (Em breve) -->
-        <div class="modo-card modo-card--linguagens modo-card--disabled" aria-label="Modo Linguagens — Em breve">
-          <div class="modo-card__badge">Em breve</div>
-          <div class="modo-card__icone">💻</div>
-          <div class="modo-card__nome">Modo Linguagens</div>
-          <div class="modo-card__desc">Paradigmas, sintaxe e uso de linguagens de programação.</div>
+        <div class="janela modo-card modo-card--linguagens modo-card--disabled" aria-label="Modo Linguagens — Em breve">
+          <div class="janela__barra">
+            <span class="janela__dots"><i></i><i></i><i></i></span>
+            <span class="janela__nav">◁ ▷</span>
+          </div>
+          <div class="janela__conteudo">
+            <div class="modo-card__badge">Em breve</div>
+            <div class="modo-card__icone">💻</div>
+            <div class="modo-card__nome">Modo Linguagens</div>
+            <div class="modo-card__desc">Paradigmas, sintaxe e uso de linguagens de programação.</div>
+          </div>
         </div>
 
       </div>
 
       <!-- Streak na home -->
-      <div class="home-streak" id="home-streak">
-        <span class="home-streak__fogo">🔥</span>
-        <span id="home-streak-texto">Comece sua sequência hoje!</span>
+      <div class="janela home-streak" id="home-streak">
+        <div class="janela__barra">
+          <span class="janela__dots"><i></i><i></i><i></i></span>
+          <span class="janela__nav">◁ ▷</span>
+        </div>
+        <div class="janela__conteudo" style="text-align:center;">
+          <span class="home-streak__fogo">🔥</span>
+          <span id="home-streak-texto">Comece sua sequência hoje!</span>
+        </div>
       </div>
 
     </div>
@@ -86,70 +121,82 @@
         ← Voltar
       </button>
 
-      <div class="jogo-header">
-        <h2 class="jogo-header__titulo">Modo Hardware — Item do Dia</h2>
-        <p class="jogo-header__data" id="diario-data"></p>
-        <p class="jogo-header__streak" id="diario-streak"></p>
-      </div>
-
-      <!-- Mensagem de sessão encerrada -->
-      <div class="msg-sessao-encerrada" id="diario-msg-encerrada" role="status" aria-live="polite"></div>
-
-      <!-- Input + Ações -->
-      <div class="input-section" id="diario-input-section">
-        <div class="input-wrapper">
-          <input
-            type="text"
-            class="input-field"
-            id="diario-input"
-            placeholder="Digite o nome de um componente..."
-            autocomplete="off"
-            aria-label="Campo de busca para adivinhar o hardware do dia"
-          >
-          <button class="btn-primario" id="diario-btn-adivinhar" type="button" aria-label="Enviar tentativa">
-            Adivinhar
-          </button>
-          <button class="btn-desistir" id="diario-btn-desistir" type="button" aria-label="Desistir da rodada">
-            Desistir
-          </button>
+      <!-- Janela principal do jogo diário -->
+      <div class="janela janela--jogo">
+        <div class="janela__barra">
+          <span class="janela__dots"><i></i><i></i><i></i></span>
+          <span class="janela__titulo-barra">Modo Hardware — Item do Dia</span>
+          <span class="janela__nav">◁ ▷</span>
         </div>
-        <ul class="autocomplete-list" id="diario-autocomplete" role="listbox" aria-label="Sugestões de itens"></ul>
-        <div class="error-message" id="diario-erro" role="alert" aria-live="polite"></div>
-      </div>
+        <div class="janela__conteudo">
 
-      <!-- Status -->
-      <div class="status-bar">
-        <div class="status-bar__counter">
-          Tentativas: <span id="diario-contador">0</span>
-        </div>
-        <div id="diario-status-hint">Adivinhe o hardware do dia!</div>
-      </div>
+          <div class="jogo-header">
+            <h2 class="jogo-header__titulo">Modo Hardware — Item do Dia</h2>
+            <p class="jogo-header__data" id="diario-data"></p>
+            <p class="jogo-header__streak" id="diario-streak"></p>
+          </div>
 
-      <!-- Tabela de tentativas -->
-      <div class="container-tabela" id="diario-tabela-container">
-        <table class="results-table" id="diario-tabela">
-          <thead>
-            <tr>
-              <th class="th-com-tooltip col-item" data-tooltip="Nome do componente ou periférico">Item</th>
-              <th class="th-com-tooltip col-tipo" data-tooltip="Categoria: Hardware, Periférico ou ambos">Tipo</th>
-              <th class="th-com-tooltip col-conexao" data-tooltip="Tipos de conexão física usados">Conexão</th>
-              <th class="th-com-tooltip col-funcao" data-tooltip="Papel principal no sistema">Função</th>
-              <th class="th-com-tooltip col-energia" data-tooltip="De onde o componente recebe energia">Energia</th>
-              <th class="th-com-tooltip col-memoria" data-tooltip="Tipo de memória integrada ou utilizada">Memória</th>
-              <th class="th-com-tooltip col-instalacao" data-tooltip="Interno ao gabinete ou externo">Instalação</th>
-              <th class="th-com-tooltip col-tecnologias" data-tooltip="Tecnologias e recursos adicionais">Tecnologias</th>
-            </tr>
-          </thead>
-          <tbody id="diario-tbody"></tbody>
-        </table>
-      </div>
+          <!-- Mensagem de sessão encerrada -->
+          <div class="msg-sessao-encerrada" id="diario-msg-encerrada" role="status" aria-live="polite"></div>
 
-      <!-- Legenda de cores -->
-      <div class="legenda-cores">
-        <span class="legenda-item">🟩 Correto</span>
-        <span class="legenda-item">🟨 Parcial</span>
-        <span class="legenda-item">🟥 Incorreto</span>
-      </div>
+          <!-- Input + Ações -->
+          <div class="input-section" id="diario-input-section">
+            <div class="input-wrapper">
+              <input
+                type="text"
+                class="input-field"
+                id="diario-input"
+                placeholder="Digite o nome de um componente..."
+                autocomplete="off"
+                aria-label="Campo de busca para adivinhar o hardware do dia"
+              >
+              <button class="btn-primario" id="diario-btn-adivinhar" type="button" aria-label="Enviar tentativa">
+                Adivinhar
+              </button>
+              <button class="btn-desistir" id="diario-btn-desistir" type="button" aria-label="Desistir da rodada">
+                Desistir
+              </button>
+            </div>
+            <ul class="autocomplete-list" id="diario-autocomplete" role="listbox" aria-label="Sugestões de itens"></ul>
+            <div class="error-message" id="diario-erro" role="alert" aria-live="polite"></div>
+          </div>
+
+          <!-- Status -->
+          <div class="status-bar">
+            <div class="status-bar__counter">
+              Tentativas: <span id="diario-contador">0</span>
+            </div>
+            <div id="diario-status-hint">Adivinhe o hardware do dia!</div>
+          </div>
+
+          <!-- Tabela de tentativas -->
+          <div class="container-tabela" id="diario-tabela-container">
+            <table class="results-table" id="diario-tabela">
+              <thead>
+                <tr>
+                  <th class="th-com-tooltip col-item" data-tooltip="Nome do componente ou periférico">Item</th>
+                  <th class="th-com-tooltip col-tipo" data-tooltip="Categoria: Hardware, Periférico ou ambos">Tipo</th>
+                  <th class="th-com-tooltip col-conexao" data-tooltip="Tipos de conexão física usados">Conexão</th>
+                  <th class="th-com-tooltip col-funcao" data-tooltip="Papel principal no sistema">Função</th>
+                  <th class="th-com-tooltip col-energia" data-tooltip="De onde o componente recebe energia">Energia</th>
+                  <th class="th-com-tooltip col-memoria" data-tooltip="Tipo de memória integrada ou utilizada">Memória</th>
+                  <th class="th-com-tooltip col-instalacao" data-tooltip="Interno ao gabinete ou externo">Instalação</th>
+                  <th class="th-com-tooltip col-tecnologias" data-tooltip="Tecnologias e recursos adicionais">Tecnologias</th>
+                </tr>
+              </thead>
+              <tbody id="diario-tbody"></tbody>
+            </table>
+          </div>
+
+          <!-- Legenda de cores -->
+          <div class="legenda-cores">
+            <span class="legenda-item">🟩 Correto</span>
+            <span class="legenda-item">🟨 Parcial</span>
+            <span class="legenda-item">🟥 Incorreto</span>
+          </div>
+
+        </div><!-- /janela__conteudo -->
+      </div><!-- /janela -->
 
       <!-- Painel de resultado -->
       <div class="painel-resultado" id="diario-painel-resultado">
@@ -176,63 +223,75 @@
         ← Voltar
       </button>
 
-      <div class="jogo-header">
-        <h2 class="jogo-header__titulo">Modo Prática — Treine sem Limites</h2>
-        <p class="jogo-header__rodada" id="pratica-rodada">Rodada 1 da sessão</p>
-      </div>
-
-      <!-- Input + Ações -->
-      <div class="input-section" id="pratica-input-section">
-        <div class="input-wrapper">
-          <input
-            type="text"
-            class="input-field"
-            id="pratica-input"
-            placeholder="Digite o nome de um componente..."
-            autocomplete="off"
-            aria-label="Campo de busca para adivinhar o hardware"
-          >
-          <button class="btn-primario" id="pratica-btn-adivinhar" type="button" aria-label="Enviar tentativa">
-            Adivinhar
-          </button>
+      <!-- Janela principal do modo prática -->
+      <div class="janela janela--jogo">
+        <div class="janela__barra">
+          <span class="janela__dots"><i></i><i></i><i></i></span>
+          <span class="janela__titulo-barra">Modo Prática — Treine sem Limites</span>
+          <span class="janela__nav">◁ ▷</span>
         </div>
-        <ul class="autocomplete-list" id="pratica-autocomplete" role="listbox" aria-label="Sugestões de itens"></ul>
-        <div class="error-message" id="pratica-erro" role="alert" aria-live="polite"></div>
-      </div>
+        <div class="janela__conteudo">
 
-      <!-- Status -->
-      <div class="status-bar">
-        <div class="status-bar__counter">
-          Tentativas: <span id="pratica-contador">0</span>
-        </div>
-        <div id="pratica-status-hint">Adivinhe o hardware!</div>
-      </div>
+          <div class="jogo-header">
+            <h2 class="jogo-header__titulo">Modo Prática — Treine sem Limites</h2>
+            <p class="jogo-header__rodada" id="pratica-rodada">Rodada 1 da sessão</p>
+          </div>
 
-      <!-- Tabela de tentativas -->
-      <div class="container-tabela" id="pratica-tabela-container">
-        <table class="results-table" id="pratica-tabela">
-          <thead>
-            <tr>
-              <th class="th-com-tooltip col-item" data-tooltip="Nome do componente ou periférico">Item</th>
-              <th class="th-com-tooltip col-tipo" data-tooltip="Categoria: Hardware, Periférico ou ambos">Tipo</th>
-              <th class="th-com-tooltip col-conexao" data-tooltip="Tipos de conexão física usados">Conexão</th>
-              <th class="th-com-tooltip col-funcao" data-tooltip="Papel principal no sistema">Função</th>
-              <th class="th-com-tooltip col-energia" data-tooltip="De onde o componente recebe energia">Energia</th>
-              <th class="th-com-tooltip col-memoria" data-tooltip="Tipo de memória integrada ou utilizada">Memória</th>
-              <th class="th-com-tooltip col-instalacao" data-tooltip="Interno ao gabinete ou externo">Instalação</th>
-              <th class="th-com-tooltip col-tecnologias" data-tooltip="Tecnologias e recursos adicionais">Tecnologias</th>
-            </tr>
-          </thead>
-          <tbody id="pratica-tbody"></tbody>
-        </table>
-      </div>
+          <!-- Input + Ações -->
+          <div class="input-section" id="pratica-input-section">
+            <div class="input-wrapper">
+              <input
+                type="text"
+                class="input-field"
+                id="pratica-input"
+                placeholder="Digite o nome de um componente..."
+                autocomplete="off"
+                aria-label="Campo de busca para adivinhar o hardware"
+              >
+              <button class="btn-primario" id="pratica-btn-adivinhar" type="button" aria-label="Enviar tentativa">
+                Adivinhar
+              </button>
+            </div>
+            <ul class="autocomplete-list" id="pratica-autocomplete" role="listbox" aria-label="Sugestões de itens"></ul>
+            <div class="error-message" id="pratica-erro" role="alert" aria-live="polite"></div>
+          </div>
 
-      <!-- Legenda de cores -->
-      <div class="legenda-cores">
-        <span class="legenda-item">🟩 Correto</span>
-        <span class="legenda-item">🟨 Parcial</span>
-        <span class="legenda-item">🟥 Incorreto</span>
-      </div>
+          <!-- Status -->
+          <div class="status-bar">
+            <div class="status-bar__counter">
+              Tentativas: <span id="pratica-contador">0</span>
+            </div>
+            <div id="pratica-status-hint">Adivinhe o hardware!</div>
+          </div>
+
+          <!-- Tabela de tentativas -->
+          <div class="container-tabela" id="pratica-tabela-container">
+            <table class="results-table" id="pratica-tabela">
+              <thead>
+                <tr>
+                  <th class="th-com-tooltip col-item" data-tooltip="Nome do componente ou periférico">Item</th>
+                  <th class="th-com-tooltip col-tipo" data-tooltip="Categoria: Hardware, Periférico ou ambos">Tipo</th>
+                  <th class="th-com-tooltip col-conexao" data-tooltip="Tipos de conexão física usados">Conexão</th>
+                  <th class="th-com-tooltip col-funcao" data-tooltip="Papel principal no sistema">Função</th>
+                  <th class="th-com-tooltip col-energia" data-tooltip="De onde o componente recebe energia">Energia</th>
+                  <th class="th-com-tooltip col-memoria" data-tooltip="Tipo de memória integrada ou utilizada">Memória</th>
+                  <th class="th-com-tooltip col-instalacao" data-tooltip="Interno ao gabinete ou externo">Instalação</th>
+                  <th class="th-com-tooltip col-tecnologias" data-tooltip="Tecnologias e recursos adicionais">Tecnologias</th>
+                </tr>
+              </thead>
+              <tbody id="pratica-tbody"></tbody>
+            </table>
+          </div>
+
+          <!-- Legenda de cores -->
+          <div class="legenda-cores">
+            <span class="legenda-item">🟩 Correto</span>
+            <span class="legenda-item">🟨 Parcial</span>
+            <span class="legenda-item">🟥 Incorreto</span>
+          </div>
+
+        </div><!-- /janela__conteudo -->
+      </div><!-- /janela -->
 
       <!-- Painel de resultado -->
       <div class="painel-resultado" id="pratica-painel-resultado">

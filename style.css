@@ -6,10 +6,10 @@
 /* === VARIÁVEIS CSS === */
 :root {
   /* Base */
-  --bg-pagina:       #FFFDF5;
-  --bg-card:         #FFFFFF;
-  --borda:           #1a1a1a;
-  --texto-primario:  #1a1a1a;
+  --bg-pagina:       #38B6FF;
+  --bg-card:         #FFFDF5;
+  --borda:           #1A1A1A;
+  --texto-primario:  #1A1A1A;
   --texto-secundario:#555555;
 
   /* Cores de acento (vibrantes, saturadas) */
@@ -24,12 +24,17 @@
   --cor-correto:     #2ED573;
   --cor-parcial:     #FBCB4A;
   --cor-errado:      #FF3864;
-  --texto-feedback:  #1a1a1a;
+  --texto-feedback:  #1A1A1A;
 
   /* Sombras */
-  --sombra-card:     4px 4px 0px #1a1a1a;
-  --sombra-botao:    3px 3px 0px #1a1a1a;
-  --sombra-hover:    2px 2px 0px #1a1a1a;
+  --sombra-card:     4px 4px 0px #1A1A1A;
+  --sombra-botao:    3px 3px 0px #1A1A1A;
+  --sombra-hover:    2px 2px 0px #1A1A1A;
+
+  /* Fonte display (estilo Bryndan Write) */
+  --fonte-display:   'Bubblegum Sans', cursive;
+  --fonte-corpo:     'Segoe UI', system-ui, sans-serif;
+  --fonte-mono:      'Courier New', Courier, monospace;
 }
 
 /* === RESET E BASE === */
@@ -47,19 +52,15 @@ html {
 }
 
 body {
-  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-family: var(--fonte-corpo);
   background-color: var(--bg-pagina);
   color: var(--texto-primario);
   min-height: 100vh;
-  /* Linhas horizontais simulando papel pautado */
-  background-image: repeating-linear-gradient(
-    to bottom,
-    transparent,
-    transparent 31px,
-    rgba(180, 200, 220, 0.2) 31px,
-    rgba(180, 200, 220, 0.2) 32px
-  );
-  background-size: 100% 32px;
+  /* Grade sutil sobre o fundo azul */
+  background-image:
+    linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
   overflow-x: hidden;
 }
 
@@ -74,35 +75,97 @@ body {
 /* === CABEÇALHO GLOBAL === */
 .header-global {
   width: 100%;
-  background: var(--azul);
-  border-bottom: 4px solid var(--borda);
-  padding: 1rem 1.5rem;
+  background: transparent;
+  padding: 2rem 1.5rem 1rem;
   text-align: center;
   position: relative;
 }
 
 .header-global__titulo {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 2.75rem;
-  font-weight: 900;
-  color: var(--texto-primario);
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  transform: rotate(-1.5deg);
+  font-family: var(--fonte-display);
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: #fff;
+  text-transform: none;
+  letter-spacing: 2px;
   display: inline-block;
-  text-decoration: underline;
-  text-decoration-style: double;
-  text-underline-offset: 6px;
-  text-decoration-thickness: 3px;
+  text-shadow: 3px 3px 0px rgba(0,0,0,0.15);
+  text-decoration: none;
 }
 
 .header-global__subtitulo {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 0.9rem;
+  font-family: var(--fonte-display);
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.85);
+  margin-top: 0.35rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  font-style: italic;
+}
+
+/* === COMPONENTE JANELA (Sketchbook Window) === */
+.janela {
+  border: 3px solid var(--borda);
+  border-radius: 10px;
+  box-shadow: var(--sombra-card);
+  overflow: hidden;
+  background: var(--bg-card);
+}
+
+.janela__barra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: #e8e4dc;
+  border-bottom: 2px solid var(--borda);
+}
+
+.janela__dots {
+  display: flex;
+  gap: 6px;
+}
+
+.janela__dots i {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--borda);
+}
+
+.janela__dots i:nth-child(1) { background: var(--vermelho); }
+.janela__dots i:nth-child(2) { background: var(--amarelo); }
+.janela__dots i:nth-child(3) { background: var(--verde); }
+
+.janela__nav {
+  font-family: var(--fonte-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
   color: var(--texto-secundario);
-  margin-top: 0.25rem;
-  font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 4px;
+  border: 2px solid var(--borda);
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--bg-card);
+}
+
+.janela__titulo-barra {
+  font-family: var(--fonte-display);
+  font-size: 0.85rem;
+  color: var(--texto-secundario);
+  flex: 1;
+  text-align: center;
+}
+
+.janela__conteudo {
+  padding: 1.5rem;
+  background: var(--bg-card);
+}
+
+/* Janela de jogo (maior) */
+.janela--jogo {
+  margin-bottom: 1.25rem;
 }
 
 /* === TELA HOME === */
@@ -114,12 +177,13 @@ body {
 
 .home-tagline {
   text-align: center;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--texto-secundario);
+  font-family: var(--fonte-display);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #fff;
   margin-bottom: 2rem;
   letter-spacing: 0.5px;
+  text-shadow: 1px 1px 0px rgba(0,0,0,0.1);
 }
 
 .modos-grid {
@@ -131,14 +195,9 @@ body {
 
 .modo-card {
   background: var(--bg-card);
-  border: 3px solid var(--borda);
-  box-shadow: var(--sombra-card);
-  padding: 1.5rem;
-  text-align: center;
   cursor: pointer;
   transition: box-shadow 0.1s, transform 0.1s;
   position: relative;
-  overflow: hidden;
 }
 
 .modo-card:hover:not(.modo-card--disabled) {
@@ -162,11 +221,11 @@ body {
 }
 
 .modo-card__nome {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 1.1rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-family: var(--fonte-display);
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0.5px;
   margin-bottom: 0.35rem;
 }
 
@@ -176,13 +235,17 @@ body {
   line-height: 1.4;
 }
 
+.modo-card .janela__conteudo {
+  text-align: center;
+}
+
 .modo-card__badge {
   position: absolute;
   top: 10px;
   right: -28px;
   background: var(--vermelho);
   color: #fff;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: var(--fonte-mono);
   font-size: 0.65rem;
   font-weight: 800;
   padding: 4px 32px;
@@ -207,14 +270,9 @@ body {
 
 /* Streak na home */
 .home-streak {
-  text-align: center;
-  padding: 1rem;
-  background: var(--bg-card);
-  border: 3px solid var(--borda);
-  box-shadow: var(--sombra-card);
-  font-family: 'Courier New', Courier, monospace;
+  font-family: var(--fonte-display);
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .home-streak__fogo {
@@ -223,7 +281,7 @@ body {
 
 /* === TELAS DE JOGO (DIÁRIO + PRÁTICA) === */
 .jogo-container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 1.25rem 1rem;
 }
@@ -237,14 +295,14 @@ body {
   color: var(--texto-primario);
   border: 3px solid var(--borda);
   box-shadow: var(--sombra-botao);
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-family: var(--fonte-display);
+  font-size: 0.9rem;
+  font-weight: 400;
   padding: 6px 14px;
   cursor: pointer;
   transition: box-shadow 0.1s, transform 0.1s;
   margin-bottom: 1rem;
+  border-radius: 6px;
 }
 
 .btn-voltar:hover {
@@ -259,11 +317,10 @@ body {
 }
 
 .jogo-header__titulo {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: var(--fonte-display);
   font-size: 1.5rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }
 
 .jogo-header__data {
@@ -273,17 +330,17 @@ body {
 }
 
 .jogo-header__streak {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: var(--fonte-display);
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 400;
   margin-top: 0.35rem;
   color: var(--laranja);
 }
 
 .jogo-header__rodada {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: var(--fonte-display);
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 400;
   margin-top: 0.35rem;
   color: var(--azul);
 }
@@ -311,6 +368,7 @@ body {
   box-shadow: var(--sombra-botao);
   outline: none;
   transition: box-shadow 0.15s;
+  border-radius: 6px;
 }
 
 .input-field::placeholder {
@@ -331,18 +389,18 @@ body {
 /* Botões de ação */
 .btn-primario {
   background: var(--azul);
-  color: var(--texto-primario);
+  color: #fff;
   border: 3px solid var(--borda);
   box-shadow: var(--sombra-botao);
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 800;
-  text-transform: uppercase;
+  font-family: var(--fonte-display);
+  font-weight: 400;
   letter-spacing: 0.05em;
   padding: 10px 20px;
   cursor: pointer;
   transition: box-shadow 0.1s, transform 0.1s;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   white-space: nowrap;
+  border-radius: 6px;
 }
 
 .btn-primario:hover:not(:disabled) {
@@ -365,16 +423,16 @@ body {
   color: #fff;
   border: 3px solid var(--borda);
   box-shadow: var(--sombra-botao);
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 800;
-  text-transform: uppercase;
+  font-family: var(--fonte-display);
+  font-weight: 400;
   letter-spacing: 0.05em;
   padding: 10px 16px;
   cursor: pointer;
   transition: box-shadow 0.1s, transform 0.1s;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   white-space: nowrap;
   display: none;
+  border-radius: 6px;
 }
 
 .btn-desistir--visivel {
@@ -480,18 +538,15 @@ body {
 
 /* === CONTAINER DA TABELA === */
 .container-tabela {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  border: 3px solid var(--borda);
-  box-shadow: var(--sombra-card);
   background: var(--bg-card);
 }
 
 /* === TABELA DE RESULTADOS === */
 .results-table {
   width: 100%;
-  border-collapse: collapse;
-  min-width: 950px;
+  border-collapse: separate;
+  border-spacing: 4px;
+  table-layout: fixed;
 }
 
 .results-table thead {
@@ -501,12 +556,12 @@ body {
 }
 
 .results-table th {
-  padding: 10px 6px;
+  padding: 12px 4px;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 0.68rem;
-  font-weight: 800;
+  font-size: 0.8rem;
+  font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   color: var(--texto-primario);
   background-color: var(--azul);
   border: 2px solid var(--borda);
@@ -523,7 +578,7 @@ body {
 .th-com-tooltip::after {
   content: attr(data-tooltip);
   position: absolute;
-  bottom: 100%;
+  top: calc(100% + 4px);
   left: 50%;
   transform: translateX(-50%);
   background: var(--borda);
@@ -534,38 +589,41 @@ body {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s;
-  z-index: 100;
+  z-index: 200;
   font-weight: 400;
   font-family: 'Segoe UI', system-ui, sans-serif;
   border: 2px solid var(--borda);
   box-shadow: 2px 2px 0px var(--borda);
-  margin-bottom: 4px;
+  border-radius: 2px;
 }
 
 .th-com-tooltip:hover::after {
   opacity: 1;
 }
 
-/* Larguras fixas por coluna (F1) */
-.col-item        { min-width: 130px; max-width: 130px; width: 130px; }
-.col-tipo        { min-width: 110px; max-width: 110px; width: 110px; }
-.col-conexao     { min-width: 130px; max-width: 130px; width: 130px; }
-.col-funcao      { min-width: 130px; max-width: 130px; width: 130px; }
-.col-energia     { min-width: 110px; max-width: 110px; width: 110px; }
-.col-memoria     { min-width: 100px; max-width: 100px; width: 100px; }
-.col-instalacao  { min-width: 100px; max-width: 100px; width: 100px; }
-.col-tecnologias { min-width: 140px; max-width: 140px; width: 140px; }
+/* Larguras uniformes — distribuição automática via table-layout: fixed */
+.col-item,
+.col-tipo,
+.col-conexao,
+.col-funcao,
+.col-energia,
+.col-memoria,
+.col-instalacao,
+.col-tecnologias {
+  width: 12.5%;
+}
 
 /* Células de tentativa (F1) */
 .celula-tentativa {
-  height: 64px;
+  height: 72px;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  padding: 4px 8px;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  padding: 6px 6px;
   text-align: center;
   vertical-align: middle;
-  font-size: 0.78rem;
+  font-size: 0.73rem;
   font-weight: 600;
   border: 2px solid var(--borda);
   color: var(--texto-feedback);
@@ -761,14 +819,14 @@ body {
   color: #fff;
   border: 3px solid var(--borda);
   box-shadow: var(--sombra-botao);
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 800;
-  text-transform: uppercase;
+  font-family: var(--fonte-display);
+  font-weight: 400;
   letter-spacing: 0.05em;
   padding: 10px 20px;
   cursor: pointer;
   transition: box-shadow 0.1s, transform 0.1s;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
+  border-radius: 6px;
 }
 
 .btn-compartilhar:hover {
@@ -781,14 +839,14 @@ body {
   color: var(--texto-primario);
   border: 3px solid var(--borda);
   box-shadow: var(--sombra-botao);
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 800;
-  text-transform: uppercase;
+  font-family: var(--fonte-display);
+  font-weight: 400;
   letter-spacing: 0.05em;
   padding: 10px 20px;
   cursor: pointer;
   transition: box-shadow 0.1s, transform 0.1s;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
+  border-radius: 6px;
 }
 
 .btn-nova-rodada:hover {
@@ -797,9 +855,9 @@ body {
 }
 
 .feedback-copiado {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 0.8rem;
-  font-weight: 800;
+  font-family: var(--fonte-display);
+  font-size: 0.85rem;
+  font-weight: 400;
   color: #1e9e54;
   display: none;
   align-items: center;
@@ -851,12 +909,11 @@ body {
   width: 100%;
   text-align: center;
   padding: 1rem;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: var(--texto-secundario);
-  border-top: 3px solid var(--borda);
-  background: var(--bg-card);
+  font-family: var(--fonte-display);
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: rgba(255,255,255,0.7);
+  background: transparent;
   margin-top: 2rem;
 }
 
@@ -872,6 +929,11 @@ body {
 
   .jogo-container {
     padding: 1rem 0.5rem;
+  }
+
+  .container-tabela {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .input-wrapper {
