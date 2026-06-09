@@ -1,0 +1,35 @@
+
+/* Doodle table restyle */
+table{ width:100%; border-collapse: separate; border-spacing:0; }
+thead th{
+  position: sticky; top:0;
+  background: #f8f1e1;
+  border: var(--stroke) solid var(--line);
+  border-bottom-width: calc(var(--stroke) * 1.2);
+  padding:.6rem .5rem;
+  text-align:left;
+  font-family: var(--font-display);
+}
+tbody td{
+  border: var(--stroke) solid var(--line);
+  padding:.55rem .5rem;
+  background: #fff;
+}
+tbody tr:nth-child(odd) td{ background: #fffdfa; }
+tbody tr:hover td{ filter: brightness(0.99); }
+
+/* leftmost index column */
+tbody td:first-child, thead th:first-child{
+  border-top-left-radius: 10px;
+}
+tbody tr:last-child td:first-child{
+  border-bottom-left-radius: 10px;
+}
+tbody tr:last-child td:last-child{
+  border-bottom-right-radius: 10px;
+}
+
+/* result colors (solid) */
+td.cell.hit{    background:#c8f7df; border-color:#138a72; }
+td.cell.partial{background:#ffe69b; border-color:#b38105; }
+td.cell.miss{   background:#ffb3c1; border-color:#b3566a; }

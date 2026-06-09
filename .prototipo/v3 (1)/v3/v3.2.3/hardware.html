@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techdle - Hardware</title>
+    <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.table.css">
+  <link rel="stylesheet" href="css/components.combo.css">
+  
+  <link rel="stylesheet" href="css/theme.doodle.css">
+</head>
+<body>
+  
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute">
+  <defs>
+    <filter id="wobble">
+      <feTurbulence type="fractalNoise" baseFrequency="0.95" numOctaves="1" seed="6" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+</svg>
+
+
+    <div>
+        <header>
+            <h1 class="title">Techdle</h1>
+            <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam, ut.</h2>
+        </header>
+        <main id="mainLoad">
+    <img class="hero-decor hero-sun" src="assets/illustrations/sunburst.svg" alt="" aria-hidden="true">
+            <h1 class="title">Techdle — Hardware</h1>
+
+            <form id="formGuess" novalidate>
+                <label for="opcoesCombo">Escolha um item:</label>
+
+                <!-- COMBOBOX -->
+                <span class="combo16" id="comboOpcoes">
+                    <input
+                    id="opcoesCombo"
+                    type="text"
+                    role="combobox"
+                    aria-expanded="false"
+                    aria-controls="opcoesList"
+                    aria-autocomplete="list"
+                    autocomplete="off"
+                    placeholder="Digite para filtrar…"
+                    />
+                    <div id="opcoesList" role="listbox" hidden></div>
+
+                    <!-- mantém o mesmo id que o JS usa (agora invisível) -->
+                    <input id="opcoes" name="opcoes" type="hidden" value="">
+                </span>
+
+                <button id="btnConferir" type="submit">Conferir</button>
+            </form>
+
+
+
+            <p id="feedback" aria-live="polite" class="feedback"></p>
+
+            <section id="tabelaWrapper" hidden>
+                <table id="tabelaResultados">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th><span class="th-tip" data-tip="Item"><span class="th-label">Item</span></span></th>
+                            <th><span class="th-tip" data-tip="Tipo"><span class="th-label">Tipo</span></span></th>
+                            <th><span class="th-tip" data-tip="Conexão"><span class="th-label">Conexão</span></span></th>
+                            <th><span class="th-tip" data-tip="Função"><span class="th-label">Função</span></span></th>
+                            <th><span class="th-tip" data-tip="Energia"><span class="th-label">Energia</span></span></th>
+                            <th><span class="th-tip" data-tip="Tipo de memória"><span class="th-label">Memória</span></span></th>
+                            <th><span class="th-tip" data-tip="Instalação"><span class="th-label">Instalação</span></span></th>
+                            <th><span class="th-tip" data-tip="Tecnologia"><span class="th-label">Tecnologia</span></span></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- Script principal do jogo -->
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>

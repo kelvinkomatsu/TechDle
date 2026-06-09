@@ -1,0 +1,50 @@
+
+/* site.hardware.css — layout & tweaks for the Hardware page */
+.header-lite{
+  display:flex; align-items:center; gap:10px;
+  padding: 18px 0 8px;
+}
+.header-lite .brand{ display:flex; align-items:center; gap:10px; }
+.header-lite .logo{ width:28px; height:28px; border-radius:10px; background:linear-gradient(135deg, var(--mint), var(--accent)); border: var(--stroke) solid var(--line); box-shadow: var(--shadow-sticker); filter:url(#wobble); }
+.header-lite .title{ font-family: var(--font-display); font-size:28px; }
+
+.page{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 16px 56px;
+}
+
+.panel{
+  margin-top: 20px;
+  padding: 26px;
+}
+
+.form-row{ display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+
+/* Inputs/buttons consistent size */
+#opcoesCombo{ padding:.65rem .75rem; min-width: 280px; }
+#btnConferir{ padding:.65rem 1rem; cursor:pointer; }
+
+/* Helper/feedback box */
+#feedback{
+  margin-top: 16px;
+  padding: 12px 14px;
+  border: var(--stroke) solid var(--line);
+  border-radius: 12px;
+  background: #E9F2FF;
+  color:#10212A;
+  font-weight: 700;
+  box-shadow: var(--shadow-sticker);
+  filter: url(#wobble);
+}
+
+/* Results table wrapper */
+#tabelaWrapper{ margin-top: 18px; }
+#tabelaResultados{ width:100%; }
+
+/* Keep sunburst behind content */
+.hero-decor.hero-sun{ z-index: 0; }
+.panel, .form-row, #feedback, #tabelaWrapper{ position: relative; z-index: 1; }
+
+/* labels */
+label{ color: var(--ink); }

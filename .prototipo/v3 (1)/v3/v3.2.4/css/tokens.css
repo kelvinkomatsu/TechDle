@@ -1,0 +1,13 @@
+/* css/tokens.css
+   Design tokens / variables used by all pages (colors, spacing, fonts).
+*/
+:root{
+  --bg-0:#0d0f14;  --bg-1:#111520;  --bg-2:#1a2030;
+  --ink:#e6f0ff;   --muted:#9db0c7; --line:#2e3b55;
+  --accent:#5ad1ff; --accent-2:#ff7edb;
+  --ok:#2bd171;   --ok-2:#0e8f45;
+  --warn:#ffd35c; --warn-2:#b48412;
+  --bad:#ff6b6b;  --bad-2:#9f1f1f;
+  --radius: 8px;
+  --shadow: 0 6px 18px rgba(0,0,0,.25);
+}

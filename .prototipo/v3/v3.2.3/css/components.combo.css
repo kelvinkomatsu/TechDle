@@ -1,0 +1,9 @@
+/* css/components.combo.css
+   Input + option list with keyboard navigation.
+*/
+#comboOpcoes{ position:relative; }
+#comboInput{ width:100%; padding:.65rem .75rem; border:1px solid var(--line); border-radius:var(--radius); background:rgba(255,255,255,.03); color:var(--ink); }
+#comboList{ position:absolute; left:0; right:0; top:calc(100% + 6px); max-height:260px; overflow:auto; border:1px solid var(--line);
+  background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border-radius:var(--radius); box-shadow:var(--shadow); z-index:5; }
+.combo-option{ padding:.55rem .75rem; cursor:pointer; }
+.combo-option[aria-selected="true"], .combo-option:hover{ outline:2px solid var(--accent); outline-offset:-2px; }

@@ -1,0 +1,8 @@
+/* css/components.table.css
+   Attempts table styles & result colors. */
+table{ width:100%; border-collapse:separate; border-spacing:0; }
+thead th{ position:sticky; top:0; background:rgba(0,0,0,.25); backdrop-filter:saturate(150%) blur(8px); z-index:1; }
+th, td{ border:1px solid var(--line); padding:.65rem .5rem; text-align:left; }
+td.cell.hit{    background:linear-gradient(0deg, rgba(43,209,113,.18), rgba(43,209,113,.06)); border-color: var(--ok-2); }
+td.cell.partial{background:linear-gradient(0deg, rgba(255,211,92,.18), rgba(255,211,92,.06)); border-color: var(--warn-2); }
+td.cell.miss{   background:linear-gradient(0deg, rgba(255,107,107,.18), rgba(255,107,107,.06)); border-color: var(--bad-2); }

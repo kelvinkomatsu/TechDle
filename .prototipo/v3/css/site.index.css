@@ -1,0 +1,6 @@
+/* site.index.css - small tweaks for index page */
+.kbd{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 12px;
+      padding:2px 6px; border:1px solid var(--line); border-radius:6px; background: rgba(255,255,255,.04); }
+.footer{ margin: 28px 0 8px; color: var(--muted); font-size: 13px; text-align: center; }
+.badge{ font-size: 11px; padding:2px 6px; border:1px solid var(--line); border-radius:999px; color: var(--muted); }
+.section{ margin-top: 28px; }

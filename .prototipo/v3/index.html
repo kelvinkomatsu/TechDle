@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Techdle — Início</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <!-- Core design system -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <!-- Reusable components -->
+  <link rel="stylesheet" href="css/components.hero.css">
+  <link rel="stylesheet" href="css/components.card.css">
+  <link rel="stylesheet" href="css/layout.header.css">
+  <!-- Page-specific -->
+  <link rel="stylesheet" href="css/site.index.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div class="brand">
+        <span class="logo" aria-hidden="true"></span>
+        <span class="title">Techdle</span>
+        <span class="badge">v2.3</span>
+      </div>
+      <nav class="nav">
+        <a href="hardware.html" aria-label="Ir para o jogo de hardware">Jogar</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#sobre">Sobre</a>
+      </nav>
+    </header>
+
+    <section class="hero card">
+      <h1 style="font-family: 'Press Start 2P', system-ui;">Adivinhe o componente. Aprenda jogando.</h1>
+      <p>O Techdle é um jogo diário sobre <strong>hardware</strong>. Digite para filtrar o catálogo e compare suas tentativas por colunas (Tipo, Conexão, Função, Energia, etc.).
+         Você pode reaproveitar os componentes UI e JS desta página em qualquer outra seção do site.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="hardware.html">Começar a jogar</a>
+        <a class="btn ghost" href="#como-funciona">Ver regras</a>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="section">
+      <h2>Como funciona</h2>
+      <div class="cards">
+        <article class="card-compact">
+          <h3>1) Procure pelo item</h3>
+          <p>Use o campo de busca: digite e a lista reduz. Se preferir, navegue pelas opções com <span class="kbd">↑</span> <span class="kbd">↓</span> e confirme com <span class="kbd">Enter</span>.</p>
+          <p class="meta">Reaproveitável: componente <em>Combo</em> (input + listbox) do nosso design system.</p>
+        </article>
+        <article class="card-compact">
+          <h3>2) Compare as colunas</h3>
+          <p>A tabela mostra acertos <strong>exatos</strong>, <strong>parciais</strong> (quando há sobreposição) e <strong>erros</strong> por coluna.</p>
+          <p class="meta">Reaproveitável: componente <em>Tabela de tentativas</em>.</p>
+        </article>
+        <article class="card-compact">
+          <h3>3) Sem limite de tentativas</h3>
+          <p>Por padrão, não há limite. Quer limitar? Ajuste <code>CONFIG.maxAttempts</code> no módulo de estado.</p>
+          <p class="meta">Config pelo módulo <code>state.js</code>.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="sobre" class="section">
+      <h2>Sobre os componentes</h2>
+      <div class="cards">
+        <article class="card-compact">
+          <h3>Design System (CSS)</h3>
+          <p><code>tokens.css</code>, <code>base.css</code> e os componentes (<code>components.*.css</code>) permitem montar novas páginas consistentes rapidamente.</p>
+        </article>
+        <article class="card-compact">
+          <h3>Módulos (JS)</h3>
+          <p>Utilitários puros (<code>utils/</code>), UI declarativa (<code>ui/</code>), regras de negócio (<code>logic/</code>), carregamento de dados (<code>data.js</code>) e orquestração (<code>controllers.gameController.js</code>).</p>
+        </article>
+        <article class="card-compact">
+          <h3>Dataset</h3>
+          <p>Os itens são lidos de <code>src/componentes.json</code>. Outras páginas podem consumir os mesmos dados sem o jogo.</p>
+        </article>
+      </div>
+    </section>
+
+    <p class="footer">Feito com ♥ — Techdle modular. Reaproveite os componentes, crie novas páginas e divirta-se.</p>
+  </div>
+</body>
+</html>

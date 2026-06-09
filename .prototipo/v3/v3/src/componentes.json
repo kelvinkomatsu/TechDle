@@ -1,0 +1,112 @@
+[
+  {
+    "ITEM": "Placa-mae", "TIPO": "Interno", "CONEXAO": "PCIe, SATA, DIMM",
+    "FUNCAO": "Processamento, Comunicacao", "ENERGIA": "Fonte", "TIPO_DE_MEMORIA": "BIOS",
+    "INSTALACAO": "Interna", "TIPO_DE_TECNOLOGIA": "RGB, Chipset"
+  },
+  {
+    "ITEM": "Processador", "TIPO": "Interno", "CONEXAO": "Socket",
+    "FUNCAO": "Processamento", "ENERGIA": "Fonte", "TIPO_DE_MEMORIA": "Cache",
+    "INSTALACAO": "Interna", "TIPO_DE_TECNOLOGIA": "Turbo Boost, Threads"
+  },
+  {
+    "ITEM": "Memoria RAM", "TIPO": "Interno", "CONEXAO": "DIMM",
+    "FUNCAO": "Processamento", "ENERGIA": "Fonte", "TIPO_DE_MEMORIA": "8GB, DDR4",
+    "INSTALACAO": "Interna", "TIPO_DE_TECNOLOGIA": "Alta Velocidade"
+  },
+  {
+    "ITEM": "Placa de Video", "TIPO": "Interno", "CONEXAO": "PCIe",
+    "FUNCAO": "Processamento, Video", "ENERGIA": "Fonte", "TIPO_DE_MEMORIA": "VRAM",
+    "INSTALACAO": "Interna", "TIPO_DE_TECNOLOGIA": "GPU, Ray Tracing, RGB"
+  },
+  {
+    "ITEM": "SSD NVMe", "TIPO": "Interno", "CONEXAO": "M.2",
+    "FUNCAO": "Armazenamento", "ENERGIA": "Fonte", "TIPO_DE_MEMORIA": "SSD",
+    "INSTALACAO": "Interna", "TIPO_DE_TECNOLOGIA": "Alta Velocidade"
+  },
+  {
+    "ITEM": "HD", "TIPO": "Interno", "CONEXAO": "SATA",
+    "FUNCAO": "Armazenamento", "ENERGIA": "Fonte", "TIPO_DE_MEMORIA": "HD",
+    "INSTALACAO": "Interna", "TIPO_DE_TECNOLOGIA": "X"
+  },
+  {
+    "ITEM": "Fonte ATX", "TIPO": "Interno", "CONEXAO": "Cabos",
+    "FUNCAO": "Energia", "ENERGIA": "X", "TIPO_DE_MEMORIA": "X",
+    "INSTALACAO": "Interna", "TIPO_DE_TECNOLOGIA": "PFC Ativo"
+  },
+  {
+    "ITEM": "Gabinete", "TIPO": "Interno", "CONEXAO": "X",
+    "FUNCAO": "Estrutura", "ENERGIA": "X", "TIPO_DE_MEMORIA": "X",
+    "INSTALACAO": "Interna", "TIPO_DE_TECNOLOGIA": "RGB, USB Painel Frontal"
+  },
+  {
+    "ITEM": "Cooler", "TIPO": "Interno", "CONEXAO": "3 pinos, 4 pinos",
+    "FUNCAO": "Refrigeracao", "ENERGIA": "Fonte", "TIPO_DE_MEMORIA": "X",
+    "INSTALACAO": "Interna", "TIPO_DE_TECNOLOGIA": "RGB, PWM"
+  },
+  {
+    "ITEM": "Switch de Rede", "TIPO": "Interno", "CONEXAO": "RJ-45",
+    "FUNCAO": "Comunicacao", "ENERGIA": "Fonte", "TIPO_DE_MEMORIA": "X",
+    "INSTALACAO": "Interna", "TIPO_DE_TECNOLOGIA": "Gerenciavel, VLAN"
+  },
+  {
+    "ITEM": "Roteador", "TIPO": "Externo", "CONEXAO": "RJ-45, Wireless",
+    "FUNCAO": "Comunicacao", "ENERGIA": "Fonte", "TIPO_DE_MEMORIA": "X",
+    "INSTALACAO": "Interna", "TIPO_DE_TECNOLOGIA": "Wi-Fi, Dual Band, Firewall"
+  },
+  {
+    "ITEM": "Pen drive", "TIPO": "Externo", "CONEXAO": "USB",
+    "FUNCAO": "Armazenamento", "ENERGIA": "USB", "TIPO_DE_MEMORIA": "Flash",
+    "INSTALACAO": "Compacto", "TIPO_DE_TECNOLOGIA": "X"
+  },
+  {
+    "ITEM": "Monitor", "TIPO": "Saida", "CONEXAO": "HDMI, VGA",
+    "FUNCAO": "Video", "ENERGIA": "Fonte", "TIPO_DE_MEMORIA": "X",
+    "INSTALACAO": "Externa", "TIPO_DE_TECNOLOGIA": "Full HD, LCD"
+  },
+  {
+    "ITEM": "Teclado", "TIPO": "Entrada", "CONEXAO": "USB, Wireless",
+    "FUNCAO": "Entrada", "ENERGIA": "USB", "TIPO_DE_MEMORIA": "X",
+    "INSTALACAO": "Externa", "TIPO_DE_TECNOLOGIA": "Mecanico, RGB"
+  },
+  {
+    "ITEM": "Mouse", "TIPO": "Entrada", "CONEXAO": "USB, Wireless",
+    "FUNCAO": "Entrada", "ENERGIA": "USB", "TIPO_DE_MEMORIA": "X",
+    "INSTALACAO": "Externa", "TIPO_DE_TECNOLOGIA": "Optico, RGB, Laser"
+  },
+  {
+    "ITEM": "Fone de Ouvido", "TIPO": "Saida", "CONEXAO": "P2, P3, Bluetooth",
+    "FUNCAO": "Audio", "ENERGIA": "USB", "TIPO_DE_MEMORIA": "X",
+    "INSTALACAO": "Externa", "TIPO_DE_TECNOLOGIA": "Sem Fio, Estereo, Bluetooth"
+  },
+  {
+    "ITEM": "Headset", "TIPO": "Entrada/Saida", "CONEXAO": "USB, P2, Bluetooth",
+    "FUNCAO": "Audio, Comunicacao", "ENERGIA": "USB", "TIPO_DE_MEMORIA": "X",
+    "INSTALACAO": "Externa", "TIPO_DE_TECNOLOGIA": "Surround, RGB, Estereo"
+  },
+  {
+    "ITEM": "Microfone", "TIPO": "Entrada", "CONEXAO": "USB, P2",
+    "FUNCAO": "Audio", "ENERGIA": "USB", "TIPO_DE_MEMORIA": "X",
+    "INSTALACAO": "Externa", "TIPO_DE_TECNOLOGIA": "Condensador, Sem Fio"
+  },
+  {
+    "ITEM": "Caixa de Som", "TIPO": "Saida", "CONEXAO": "USB, P2",
+    "FUNCAO": "Audio", "ENERGIA": "Fonte", "TIPO_DE_MEMORIA": "X",
+    "INSTALACAO": "Externa", "TIPO_DE_TECNOLOGIA": "Estereo, Amplificada"
+  },
+  {
+    "ITEM": "Webcam", "TIPO": "Entrada", "CONEXAO": "USB",
+    "FUNCAO": "Video", "ENERGIA": "USB", "TIPO_DE_MEMORIA": "X",
+    "INSTALACAO": "Externa", "TIPO_DE_TECNOLOGIA": "Full HD, Integrada"
+  },
+  {
+    "ITEM": "Impressora", "TIPO": "Entrada/Saida", "CONEXAO": "USB, Wi-Fi",
+    "FUNCAO": "Impressao, Saida", "ENERGIA": "Fonte", "TIPO_DE_MEMORIA": "X",
+    "INSTALACAO": "Externa", "TIPO_DE_TECNOLOGIA": "Jato de Tinta, Scanner"
+  },
+  {
+    "ITEM": "Scanner", "TIPO": "Entrada", "CONEXAO": "USB",
+    "FUNCAO": "Entrada", "ENERGIA": "USB", "TIPO_DE_MEMORIA": "X",
+    "INSTALACAO": "Externa", "TIPO_DE_TECNOLOGIA": "Optico, Alta Resolucao"
+  }
+]

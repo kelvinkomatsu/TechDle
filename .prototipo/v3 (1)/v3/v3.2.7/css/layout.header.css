@@ -1,0 +1,8 @@
+/* layout.header.css - Top nav */
+.site-header{ display:flex; align-items:center; justify-content:space-between; margin-bottom: 18px; }
+.brand{ display:flex; gap:10px; align-items:center; }
+.brand .logo{ width:28px; height:28px; border-radius:6px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); }
+.brand .title{ font-weight: 700; letter-spacing: .3px; }
+.nav{ display:flex; gap:10px; }
+.nav a{ display:inline-flex; align-items:center; border:1px solid var(--line); padding:6px 10px; border-radius: var(--radius); }
+.nav a:hover{ background: rgba(255,255,255,.04); }

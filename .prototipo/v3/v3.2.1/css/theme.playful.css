@@ -1,0 +1,114 @@
+
+/* theme.playful.css — v3.2 visual refresh (cartoon/hand-drawn vibe) */
+:root{
+  /* Palette inspired by the refs (sky blue + sunshine yellow + teal + charcoal) */
+  --sky: #47b6ff;
+  --sky-2: #2aa2f5;
+  --paper: #fcf7ef;
+  --ink-900: #12151a;
+  --ink-700: #2a3545;
+  --ink-500: #516079;
+  --accent: #ffd35c;
+  --accent-2: #ffb800;
+  --mint: #3bd4b4;
+  --rose: #ff8bb0;
+
+  /* Tokens the rest of the system uses */
+  --bg-0: var(--paper);
+  --bg-1: var(--paper);
+  --bg-2: #fff;
+  --ink: var(--ink-900);
+  --muted: var(--ink-500);
+  --line: rgba(18,21,26,.12);
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(18,21,26,.12);
+}
+
+/* Global background: blue shapes + subtle pattern */
+body{
+  background:
+    radial-gradient(900px 500px at 10% -20%, rgba(71,182,255,.35), transparent 60%),
+    radial-gradient(700px 400px at 110% 10%, rgba(59,212,180,.20), transparent 60%),
+    linear-gradient(180deg, var(--bg-1), var(--bg-0));
+  color: var(--ink);
+}
+
+/* Typography refresh */
+:root{
+  --font-display: 'Baloo 2', system-ui, sans-serif;
+  --font-body: 'Nunito', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial;
+}
+h1,h2,h3{ font-family: var(--font-display); letter-spacing:.3px; }
+body{ font-family: var(--font-body); }
+
+/* Card look: paper window with thicker border + rounded corners */
+.card, .card-compact{
+  background: #fff;
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Buttons: soft rounded + playful highlight */
+.btn{
+  border-radius: 12px;
+  border: 2px solid var(--line);
+  background: linear-gradient(180deg, #fff, #f7f7f7);
+}
+.btn.primary{
+  border-color: transparent;
+  background: linear-gradient(180deg, var(--accent), var(--accent-2));
+  color: #202020;
+  font-weight: 700;
+}
+
+/* Hero tweaks */
+.hero{
+  padding: 48px 24px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::after{
+  content:'';
+  position:absolute; right:-40px; bottom:-40px; width:220px; height:220px;
+  background: url('../assets/illustrations/sparkle.svg') no-repeat center/contain;
+  opacity:.35;
+}
+
+/* Combo input */
+#opcoesCombo{
+  border-radius: 12px;
+  border: 2px solid var(--line);
+  background: #fff;
+  color: var(--ink-900);
+}
+#opcoesList{
+  border-radius: 12px;
+  border: 2px solid var(--line);
+  background: #fff;
+}
+
+/* Table colors: softer tints */
+td.cell.hit{    background: rgba(59,212,180,.18); border-color: #1aa889; }
+td.cell.partial{background: rgba(255,211,92,.22); border-color: #c9970b; }
+td.cell.miss{   background: rgba(255,139,176,.20); border-color: #d05b86; }
+
+/* Header / nav */
+.site-header .logo{
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--sky), var(--mint));
+  box-shadow: 0 6px 18px rgba(71,182,255,.35);
+}
+.nav a{ border-radius: 10px; }
+
+/* Pills / badges */
+.pill{
+  background: #fff;
+  border:2px solid var(--line);
+  border-radius:999px;
+}
+
+/* Footer full-bleed light band */
+.footer-outer{
+  background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.03));
+}

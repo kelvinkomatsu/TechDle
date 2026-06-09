@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techdle - Hardware</title>
+    <link rel="stylesheet" href="css/hardware.css">
+</head>
+<body>
+
+    <div>
+        <header>
+            <h1>Techdle</h1>
+            <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam, ut.</h2>
+        </header>
+        <main>
+            <h3>Adivinhe o hardware de hoje</h3>
+            
+            <!-- Formulário de envio da resposta do jogador -->
+            <form action="#" id="formularioFeedback" method="post">
+                <fieldset>
+                    <legend>Escolha o hardware</legend>
+
+                    <!-- Rótulo para acessibilidade -->
+                    <label for="opcoes">Selecione um item:</label>
+                    <select id="opcoes" required>
+                        <option value="" disabled selected>— escolha um item —</option>
+                    </select>
+
+                    <button type="submit" id="botaoConferir">Conferir!</button>
+                </fieldset>
+            </form>
+            
+            <div id="mainLoad">
+                <!-- Espaço para mostrar mensagem de feedback (acerto/erro) -->
+                <div id="mensagemFeedback" aria-live="polite"></div>
+
+                <!-- Tabela com o histórico de escolhas -->
+                <table id="tabelaResultados">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Tipo</th>
+                            <th>Conexão</th>
+                            <th>Função</th>
+                            <th>Energia</th>
+                            <th>Tipo de memória</th>
+                            <th>Instalação</th>
+                            <th>Tipo de tecnologia</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaEscolhas">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <!-- Script principal do jogo -->
+    <script src="./js/game.js"></script>
+</body>
+</html>

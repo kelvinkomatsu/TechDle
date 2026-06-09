@@ -1,0 +1,47 @@
+/* site.index.css - small tweaks for index page */
+.kbd{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 12px;
+      padding:2px 6px; border:1px solid var(--line); border-radius:6px; background: rgba(255,255,255,.04); }
+.footer{ margin: 28px 0 8px; color: var(--muted); font-size: 13px; text-align: center; }
+.badge{ font-size: 11px; padding:2px 6px; border:1px solid var(--line); border-radius:999px; color: var(--muted); }
+.section{ margin-top: 28px; }
+
+/* Badgezinho “Em construção” */
+.pill{
+  font-size: 11px;
+  padding: 2px 6px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  margin-left: 6px;
+}
+
+/* Botão desativado visualmente */
+.btn.is-disabled,
+a[aria-disabled="true"]{
+  opacity: .55;
+  pointer-events: none; /* reforçado também via JS pra prevenir navegação */
+  cursor: not-allowed;
+}
+
+
+.section{ margin-top:28px; margin-bottom:56px; }
+.container{ width:100%; max-width: var(--content-max); margin:0 auto; padding:0 16px; }
+
+/* faixa clara ocupando a tela toda */
+.footer-outer{
+  background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.06));
+  border-top:1px solid var(--line);
+}
+.site-footer{
+  max-width:1100px;
+  margin:0 auto;
+  padding:24px 16px 8px;
+  color:var(--muted);
+  text-align:center;
+  font-size:13px;
+}
+
+@media (max-width: 768px){
+  .hero{ padding:28px 16px; }
+  .nav a{ padding:6px 8px; }
+}

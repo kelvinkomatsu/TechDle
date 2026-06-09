@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Techdle — Hub de Jogos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <!-- Design system -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+
+  <!-- Componentes reutilizáveis -->
+  <link rel="stylesheet" href="css/layout.header.css">
+  <link rel="stylesheet" href="css/components.hero.css">
+  <link rel="stylesheet" href="css/components.card.css">
+
+  <!-- Estilos específicos da página -->
+  <link rel="stylesheet" href="css/site.index.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header / Navegação -->
+    <header class="site-header">
+      <div class="brand">
+        <span class="logo" aria-hidden="true"></span>
+        <span class="title">Techdle</span>
+        <span class="badge">hub</span>
+      </div>
+      <nav class="nav">
+        <a href="#jogos">Jogos</a>
+        <a href="#sobre">Sobre</a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero card">
+      <h1 style="font-family: 'Press Start 2P', system-ui;">Aprenda tecnologia jogando.</h1>
+      <p>O Techdle é um hub de jogos educativos. Hoje você já pode jogar o <strong>Techdle: Hardware</strong>. 
+         Em breve, teremos <em>Redes</em>, <em>Programação</em> e <em>Algoritmos</em> — todos usando os mesmos componentes de UI e lógica modular.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="hardware.html" aria-label="Ir para o jogo de hardware">Jogar Hardware</a>
+        <a class="btn ghost" href="#jogos">Ver todos os jogos</a>
+      </div>
+    </section>
+
+    <!-- Grid de jogos -->
+    <section id="jogos" class="section">
+      <h2>Jogos</h2>
+      <div class="cards">
+
+        <!-- Hardware (ativo) -->
+        <article class="card-compact">
+          <h3>Techdle: Hardware</h3>
+          <p>Descubra o componente comparando colunas (Tipo, Conexão, Função, Energia, etc.). Digite para filtrar e aprenda com o feedback.</p>
+          <div class="meta">Status: <strong>Disponível</strong></div>
+          <div style="margin-top:12px; display:flex; gap:8px;">
+            <a class="btn" href="hardware.html">Jogar</a>
+            <a class="btn ghost" href="hardware.html#como-jogar">Como jogar</a>
+          </div>
+        </article>
+
+        <!-- Redes (em construção) -->
+        <article class="card-compact">
+          <h3>Techdle: Redes <span class="pill">Em construção</span></h3>
+          <p>Topologias, protocolos e dispositivos de rede — mesmos componentes de comparação, novo conjunto de dados.</p>
+          <div class="meta">Status: <span>Em construção</span></div>
+          <div style="margin-top:12px;">
+            <a class="btn is-disabled" href="#" aria-disabled="true" title="Em construção">Em construção</a>
+          </div>
+        </article>
+
+        <!-- Programação (em construção) -->
+        <article class="card-compact">
+          <h3>Techdle: Programação <span class="pill">Em construção</span></h3>
+          <p>Paradigmas, estruturas de dados e sintaxe em diferentes linguagens — jogue para fixar conceitos.</p>
+          <div class="meta">Status: <span>Em construção</span></div>
+          <div style="margin-top:12px;">
+            <a class="btn is-disabled" href="#" aria-disabled="true" title="Em construção">Em construção</a>
+          </div>
+        </article>
+
+        <!-- Algoritmos (em construção) -->
+        <article class="card-compact">
+          <h3>Techdle: Algoritmos <span class="pill">Em construção</span></h3>
+          <p>Complexidade, famílias de algoritmos e aplicações práticas — formato de comparação + dicas pedagógicas.</p>
+          <div class="meta">Status: <span>Em construção</span></div>
+          <div style="margin-top:12px;">
+            <a class="btn is-disabled" href="#" aria-disabled="true" title="Em construção">Em construção</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="section">
+      <h2>Sobre</h2>
+      <div class="cards">
+        <article class="card-compact">
+          <h3>Arquitetura modular</h3>
+          <p>UI, lógica e dados separados em módulos reutilizáveis. Cada jogo reaproveita <code>utils</code>, <code>ui</code>, <code>logic</code>, <code>data</code> e <code>state</code>.</p>
+          <p class="meta">Reuso acelera novas páginas e mantém consistência visual.</p>
+        </article>
+        <article class="card-compact">
+          <h3>Expansível por datasets</h3>
+          <p>Cada tema (Hardware, Redes, etc.) usa seu próprio JSON, mantendo o contrato de colunas/feedback.</p>
+          <p class="meta">Sem acoplar UI a um único assunto.</p>
+        </article>
+        <article class="card-compact">
+          <h3>Foco educacional</h3>
+          <p>Feedback por coluna (acerto, parcial, erro) e, futuramente, explicações curtas para reforço do aprendizado.</p>
+          <p class="meta">Gamificação + conteúdo técnico.</p>
+        </article>
+      </div>
+    </section>
+
+    
+  </div>
+  <div class="footer-outer">
+    <footer class="site-footer">
+      Techdle — hub de jogos educativos. Hardware disponível; novos jogos em construção.
+    </footer>
+  </div>
+
+  <!-- Previne clique nos links desativados -->
+  <script>
+    document.addEventListener('click', (e) => {
+      const a = e.target.closest('a[aria-disabled="true"]');
+      if (a) { e.preventDefault(); }
+    });
+  </script>
+</body>
+</html>

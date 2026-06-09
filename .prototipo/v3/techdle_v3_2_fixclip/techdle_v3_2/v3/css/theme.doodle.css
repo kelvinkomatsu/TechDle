@@ -1,0 +1,144 @@
+
+/* theme.doodle.css — v3.2 (iter 2) closer to reference
+   - Sky blue background
+   - "Paper" windows with thick hand-drawn outline
+   - Sticker-like offset shadow
+   - Browser window hero with address bar + arrows
+*/
+:root{
+  --sky:#4EC3FF;
+  --sky-dark:#1FA4EE;
+  --paper:#FFF9ED;
+  --ink:#10212A;
+  --muted:#3B5568;
+  --line:#0C1E28;
+  --accent:#FFD35C;
+  --accent-2:#FFB800;
+  --rose:#FF8FA3;
+  --mint:#3ED7B0;
+
+  --radius:22px;
+  --stroke:3.5px;
+  --shadow-sticker: 6px 8px 0 rgba(0,0,0,.10);
+}
+
+/* Page background: flat sky with blobs */
+body{
+  color:var(--ink);
+  background: var(--sky);
+  font-family: 'Nunito', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell;
+}
+/* subtle abstract shapes */
+body::before, body::after{
+  content:"";
+  position:fixed; inset:auto auto 10% -6%;
+  width:520px; height:320px;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255,255,255,.20) 0, rgba(255,255,255,0) 70%);
+  transform: rotate(-8deg);
+  pointer-events:none;
+}
+body::after{
+  inset: 6% -10% auto auto;
+  transform: rotate(8deg);
+}
+
+/* Headings: hand-drawn display */
+:root{
+  --font-display:'Patrick Hand', system-ui, sans-serif;
+}
+h1,h2,h3{
+  font-family: var(--font-display);
+  letter-spacing:.4px;
+}
+
+/* Generic "paper" card with thick outline, rounded, sticker shadow */
+.card, .card-compact{ background:#fff;
+  background: var(--paper);
+  border: var(--stroke) solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sticker);
+}
+
+/* Buttons */
+.btn{
+  border-radius: 14px;
+  border: var(--stroke) solid var(--line);
+  background: #fff;
+}
+.btn.primary{
+  background: linear-gradient(180deg, var(--accent), var(--accent-2));
+  color:#221a00;
+  font-weight: 800;
+}
+
+/* Header tweaks */
+.site-header .logo{
+  border-radius: 10px;
+  width: 32px; height:32px;
+  background: linear-gradient(135deg, var(--mint), var(--accent));
+  border: var(--stroke) solid var(--line);
+  box-shadow: var(--shadow-sticker);
+}
+
+/* Browser-like hero */
+.browser{
+  position: relative;
+  padding-top: 44px;
+}
+.browser .bar{
+  position:absolute; left:16px; right:16px; top:12px; height:28px;
+  background:#fff;
+  border: var(--stroke) solid var(--line);
+  border-radius:12px;
+  display:flex; align-items:center; gap:8px; padding:0 10px;
+}
+.dot{ width:10px; height:10px; border: var(--stroke) solid var(--line); border-radius:999px; background: #fff; }
+.addr{ flex:1; height:18px; border: var(--stroke) solid var(--line); border-radius:10px; background:#f5f5f5; }
+.chev{ width:20px; height:18px; border: var(--stroke) solid var(--line); border-radius:6px; background:#f5f5f5; }
+.hero .title{
+  font-size: clamp(26px, 4.6vw, 44px);
+  margin: 4px 0 8px;
+}
+.hero p{ color: var(--muted); max-width: 60ch; }
+
+/* Combo (input + list) */
+#opcoesCombo{
+  border: var(--stroke) solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  color: var(--ink);
+}
+#opcoesList{
+  border: var(--stroke) solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+}
+
+/* Table feedback tones */
+td.cell.hit{    background: rgba(62,215,176,.25); border-color: #178d71; }
+td.cell.partial{background: rgba(255,211,92,.28); border-color: #b38105; }
+td.cell.miss{   background: rgba(255,143,163,.28); border-color: #b3566a; }
+
+/* Footer band */
+.footer-outer{
+  background: rgba(255,255,255,.15);
+  border-top: var(--stroke) solid var(--line);
+}
+.site-footer{ color:#10212A; }
+
+
+/* Hand-drawn wobble filter */
+.card, .card-compact, .btn, .site-header .logo, .browser .bar, .browser .bar .chev, .browser .bar .addr {
+  filter: url(#wobble);
+}
+
+/* Hero decorations */
+.hero-decor{ position:absolute; pointer-events:none; opacity:.98; }
+.hero-laptop{ left:-30px; bottom:-16px; width:160px; transform: rotate(-4deg); filter:url(#wobble); }
+.hero-gamepad{ right:-22px; bottom:-10px; width:170px; transform: rotate(5deg); filter:url(#wobble); }
+.hero-sun{ right:-36px; top:-36px; width:180px; opacity:.9; filter:url(#wobble); }
+
+/* --- Fix: panel/card should not clip children (sun / dropdown) --- */
+.panel.card{ filter: none !important; overflow: visible; position: relative; }
+
+.hero-decor.hero-sun{ right:-48px !important; top:-48px !important; width:180px; }

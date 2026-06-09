@@ -1,0 +1,117 @@
+/* Reset e fontes base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #ece9e6, #ffffff);
+  color: #333;
+  padding: 2em;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #2c3e50;
+}
+
+h2 {
+  font-weight: 400;
+  color: #7f8c8d;
+  font-size: 1.1em;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 8px;
+  padding: 2em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  margin-bottom: 1em;
+  color: #2980b9;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1.5em;
+}
+
+select {
+  padding: 0.5em;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  min-width: 200px;
+}
+
+button {
+  padding: 0.6em 1.2em;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+#mensagemFeedback {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 1em;
+  color: #2c3e50;
+}
+
+#tabelaResultados {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+  display: none;
+}
+
+thead {
+  background-color: #ecf0f1;
+}
+
+th, td {
+  padding: 0.75em;
+  text-align: left;
+  border: 1px solid #bdc3c7;
+}
+
+.linhaAcerto {
+  background-color: #d4edda;
+  border-left: 4px solid #28a745;
+}
+
+.linhaErro {
+  background-color: #f8d7da;
+  border-left: 4px solid #dc3545;
+}
+
+@media (max-width: 600px) {
+  form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  select, button {
+    width: 100%;
+  }
+}
