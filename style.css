@@ -13,17 +13,17 @@
   --texto-secundario:#555555;
 
   /* Cores de acento (vibrantes, saturadas) */
-  --amarelo:         #FFE135;
-  --azul:            #4A90E2;
-  --vermelho:        #FF4757;
+  --amarelo:         #FBCB4A;
+  --azul:            #38B6FF;
+  --vermelho:        #FF3864;
   --verde:           #2ED573;
   --laranja:         #FFA502;
   --roxo:            #7B68EE;
 
   /* Feedback do jogo */
   --cor-correto:     #2ED573;
-  --cor-parcial:     #FFE135;
-  --cor-errado:      #FF4757;
+  --cor-parcial:     #FBCB4A;
+  --cor-errado:      #FF3864;
   --texto-feedback:  #1a1a1a;
 
   /* Sombras */
@@ -74,7 +74,7 @@ body {
 /* === CABEÇALHO GLOBAL === */
 .header-global {
   width: 100%;
-  background: var(--amarelo);
+  background: var(--azul);
   border-bottom: 4px solid var(--borda);
   padding: 1rem 1.5rem;
   text-align: center;
@@ -330,7 +330,7 @@ body {
 
 /* Botões de ação */
 .btn-primario {
-  background: var(--amarelo);
+  background: var(--azul);
   color: var(--texto-primario);
   border: 3px solid var(--borda);
   box-shadow: var(--sombra-botao);
@@ -421,7 +421,7 @@ body {
 
 .autocomplete-item:hover,
 .autocomplete-item--active {
-  background-color: var(--amarelo);
+  background-color: var(--azul);
 }
 
 .autocomplete-item--disabled {
@@ -508,7 +508,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--texto-primario);
-  background-color: var(--amarelo);
+  background-color: var(--azul);
   border: 2px solid var(--borda);
   text-align: center;
   white-space: nowrap;
