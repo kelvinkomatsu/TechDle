@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TechDle — Jogo educativo de adivinhação diária sobre hardware de computadores. Teste seus conhecimentos em tecnologia no estilo Wordle!">
+  <meta name="description"
+    content="TechDle — Jogo educativo de adivinhação diária sobre hardware de computadores. Teste seus conhecimentos em tecnologia no estilo Wordle!">
   <title>TechDle — Adivinhe o Componente</title>
 
   <!-- Google Fonts: Bubblegum Sans (estilo Bryndan Write) -->
@@ -13,11 +15,12 @@
 
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YcnS/wPT08Qrg6GlOQ+VD0jBA2dG/6HPkjS" crossorigin="anonymous">
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YcnS/wPT08Qrg6GlOQ+VD0jBA2dG/6HPkjS" crossorigin="anonymous">
 
   <!-- Estilos customizados -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <!-- ============================================================ -->
@@ -40,7 +43,7 @@
 
         <!-- Modo Hardware (Diário) -->
         <div class="janela modo-card modo-card--hardware" id="card-hardware" role="button" tabindex="0"
-             aria-label="Jogar Modo Hardware — Item do Dia">
+          aria-label="Jogar Modo Hardware — Item do Dia">
           <div class="janela__barra">
             <span class="janela__dots"><i></i><i></i><i></i></span>
             <span class="janela__nav">◁ ▷</span>
@@ -48,13 +51,14 @@
           <div class="janela__conteudo">
             <div class="modo-card__icone">🖥️</div>
             <div class="modo-card__nome">Modo Hardware</div>
-            <div class="modo-card__desc">Adivinhe o componente do dia. Uma tentativa por dia, sem limite de chutes!</div>
+            <div class="modo-card__desc">Adivinhe o componente do dia. Uma tentativa por dia, sem limite de chutes!
+            </div>
           </div>
         </div>
 
         <!-- Modo Prática -->
         <div class="janela modo-card modo-card--pratica" id="card-pratica" role="button" tabindex="0"
-             aria-label="Jogar Modo Prática — Treine sem limites">
+          aria-label="Jogar Modo Prática — Treine sem limites">
           <div class="janela__barra">
             <span class="janela__dots"><i></i><i></i><i></i></span>
             <span class="janela__nav">◁ ▷</span>
@@ -142,14 +146,8 @@
           <!-- Input + Ações -->
           <div class="input-section" id="diario-input-section">
             <div class="input-wrapper">
-              <input
-                type="text"
-                class="input-field"
-                id="diario-input"
-                placeholder="Digite o nome de um componente..."
-                autocomplete="off"
-                aria-label="Campo de busca para adivinhar o hardware do dia"
-              >
+              <input type="text" class="input-field" id="diario-input" placeholder="Digite o nome de um componente..."
+                autocomplete="off" aria-label="Campo de busca para adivinhar o hardware do dia">
               <button class="btn-primario" id="diario-btn-adivinhar" type="button" aria-label="Enviar tentativa">
                 Adivinhar
               </button>
@@ -179,9 +177,12 @@
                   <th class="th-com-tooltip col-conexao" data-tooltip="Tipos de conexão física usados">Conexão</th>
                   <th class="th-com-tooltip col-funcao" data-tooltip="Papel principal no sistema">Função</th>
                   <th class="th-com-tooltip col-energia" data-tooltip="De onde o componente recebe energia">Energia</th>
-                  <th class="th-com-tooltip col-memoria" data-tooltip="Tipo de memória integrada ou utilizada">Memória</th>
-                  <th class="th-com-tooltip col-instalacao" data-tooltip="Interno ao gabinete ou externo">Instalação</th>
-                  <th class="th-com-tooltip col-tecnologias" data-tooltip="Tecnologias e recursos adicionais">Tecnologias</th>
+                  <th class="th-com-tooltip col-memoria" data-tooltip="Tipo de memória integrada ou utilizada">Memória
+                  </th>
+                  <th class="th-com-tooltip col-instalacao"
+                    data-tooltip="Instalação interna ou externa a algo como gabinete, rack, sala">Instalação</th>
+                  <th class="th-com-tooltip col-tecnologias" data-tooltip="Tecnologias e recursos adicionais">
+                    Tecnologias</th>
                 </tr>
               </thead>
               <tbody id="diario-tbody"></tbody>
@@ -203,7 +204,8 @@
         <div class="painel-resultado__status" id="diario-resultado-status"></div>
         <div class="painel-resultado__ficha" id="diario-ficha"></div>
         <div class="painel-resultado__acoes">
-          <button class="btn-compartilhar" id="diario-btn-compartilhar" type="button" aria-label="Compartilhar resultado">
+          <button class="btn-compartilhar" id="diario-btn-compartilhar" type="button"
+            aria-label="Compartilhar resultado">
             📋 Compartilhar
           </button>
           <span class="feedback-copiado" id="diario-feedback-copiado">Copiado! ✓</span>
@@ -240,14 +242,8 @@
           <!-- Input + Ações -->
           <div class="input-section" id="pratica-input-section">
             <div class="input-wrapper">
-              <input
-                type="text"
-                class="input-field"
-                id="pratica-input"
-                placeholder="Digite o nome de um componente..."
-                autocomplete="off"
-                aria-label="Campo de busca para adivinhar o hardware"
-              >
+              <input type="text" class="input-field" id="pratica-input" placeholder="Digite o nome de um componente..."
+                autocomplete="off" aria-label="Campo de busca para adivinhar o hardware">
               <button class="btn-primario" id="pratica-btn-adivinhar" type="button" aria-label="Enviar tentativa">
                 Adivinhar
               </button>
@@ -274,9 +270,12 @@
                   <th class="th-com-tooltip col-conexao" data-tooltip="Tipos de conexão física usados">Conexão</th>
                   <th class="th-com-tooltip col-funcao" data-tooltip="Papel principal no sistema">Função</th>
                   <th class="th-com-tooltip col-energia" data-tooltip="De onde o componente recebe energia">Energia</th>
-                  <th class="th-com-tooltip col-memoria" data-tooltip="Tipo de memória integrada ou utilizada">Memória</th>
-                  <th class="th-com-tooltip col-instalacao" data-tooltip="Interno ao gabinete ou externo">Instalação</th>
-                  <th class="th-com-tooltip col-tecnologias" data-tooltip="Tecnologias e recursos adicionais">Tecnologias</th>
+                  <th class="th-com-tooltip col-memoria" data-tooltip="Tipo de memória integrada ou utilizada">Memória
+                  </th>
+                  <th class="th-com-tooltip col-instalacao" data-tooltip="Interno ao gabinete ou externo">Instalação
+                  </th>
+                  <th class="th-com-tooltip col-tecnologias" data-tooltip="Tecnologias e recursos adicionais">
+                    Tecnologias</th>
                 </tr>
               </thead>
               <tbody id="pratica-tbody"></tbody>
@@ -316,9 +315,11 @@
 
   <!-- Bootstrap 5 JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 
   <!-- Script principal do jogo -->
   <script src="script.js"></script>
 </body>
+
 </html>
